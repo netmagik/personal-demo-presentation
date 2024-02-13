@@ -15,7 +15,7 @@ export default defineType({
     }),
     defineField({
       type: 'string',
-      name: 'core-component',
+      name: 'core_component',
       title: 'Core component',
       validation: (rule) => rule.required(),
     }),
