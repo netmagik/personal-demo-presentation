@@ -4,9 +4,10 @@ interface HeaderProps {
   centered?: boolean
   description?: any[]
   title?: string
+  core_component?: string
 }
 export function Header(props: HeaderProps) {
-  const { title, description, centered = false } = props
+  const { title, description, centered = false, core_component } = props
   if (!description && !title) {
     return null
   }
@@ -22,6 +23,12 @@ export function Header(props: HeaderProps) {
       {description && (
         <div className="mt-4 font-serif text-xl text-gray-600 md:text-2xl">
           <CustomPortableText value={description} />
+        </div>
+      )}
+      {/* Core component */}
+      {core_component && (
+        <div className="mt-4 font-serif text-xl text-gray-600 md:text-2xl">
+          {core_component}
         </div>
       )}
     </div>
