@@ -14,6 +14,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      type: 'string',
+      name: 'core-component',
+      title: 'Core component',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       type: 'slug',
       name: 'slug',
       title: 'Slug',
